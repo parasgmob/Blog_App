@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="'E:/22/Desktop/vs_code/new_django_project_corey/news_feed/static/home.css"> -->
+    <link rel="stylesheet" type="text/css" href={% static 'blog/css/home.css' %}>
+    {% if title %}
+        <title>Django Blog - {{ title }}</title>
+    {% else %}
+        <title>Django Blog</title>
+    {% endif %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="ul-class"> 
+                <div class="left-most">
+                    <div class="icon-blog">
+                        <li><a href = "#"><img src={% static 'blog/images/blog-icon.png' %} alt="Chat icon" width="25" height="30"> </a></li>
+                        <li><a href = "{% url 'blog-home' %}">Blog App</a></li>
+                    </div>
+                   <li><a href = "{% url 'blog-home' %}">Home</a></li>
+
+                </div>
+                <li>
+                    <input type = "search" value = "Search" size="70"><button><img src={% static 'blog/images/search-icon.png' %} alt="Search icon" width="10" height="10"> </button></input>
+                    <!-- <button><img src={% static 'blog/images/search-icon.png' %} alt="Search icon" width="10" height="10"> </button> -->
+                </li>
+                <div class="right-most">
+                    <li><a href = "{% url 'blog-about' %}">About</a></li>
+                    <li><a href = "#">Login</a></li>
+                    <li><a href = "#">Register</a></li>
+                </div>
+                
+            </ul>
+
+        </nav>
+        
+    </header>
+    <div class="container">
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+        <div class="sidebar">
+            <h2>Our Sidebar</h2>
+            <p>You can put any information here you'd like</p>
+            <ul class="ul-sidebar">
+                <li>Latest Posts</li>
+                <li>Announcements</li>
+                <li>Calendars</li>
+                <li>etc</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

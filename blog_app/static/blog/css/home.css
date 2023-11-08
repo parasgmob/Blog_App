@@ -1,0 +1,107 @@
+*, *::before{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    background-color: red !important;
+}
+ 
+.ul-class {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    background-color: aliceblue;
+    
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.left-most, .right-most {
+    display: flex;
+    /* gap: 20px; */
+    align-items: center;
+}
+.icon-blog{
+    display: flex;
+    gap:5px;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.right-most{
+    margin-right: 25px;
+    gap: 25px;
+}
+
+.left-most:nth-child(2) {
+    background-color: yellow !important;
+}
+
+.container{
+    display: flex;
+    margin-top: 15px;
+    margin-left:120px;
+    margin-right: 20px;
+    background-color: aquamarine;
+    /* gap:400px; */
+    justify-content: space-between;
+}
+
+.left-side-nav{
+    display: flex;
+    background-color: blueviolet;
+    gap: 10px;
+}
+
+.nav_bar{
+    display: inline;
+}
+
+.sidebar{
+    border: 4px solid rgb(15, 116, 6);
+    padding: 10px;
+    height: 50%;
+}
+
+.ul-sidebar{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.ul-sidebar li{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+    color: blue;
+}
+
+.ul-sidebar > :last-child {
+    border-bottom:  1px solid black;
+}
+
+.content{
+    padding: 10px ;
+}
+
+.content h1 {
+    margin-top: 5px;
+
+}
+.content h3 {
+    margin-top: 5px;
+
+}
+.content p {
+    margin-top: 5px;
+
+}
+

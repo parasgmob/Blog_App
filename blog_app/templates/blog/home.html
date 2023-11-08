@@ -1,0 +1,8 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <h3>{{ post.title }}</h3>
+        <p> By {{post.author }} on {{ post.date_posted | date:"F d, Y" }}</p> <!--here '|' works like a date filter F for full month name d for two digits date and Y for full year-->
+        <p>{{ post.content }} </p>
+    {% endfor %}
+{% endblock content %}
